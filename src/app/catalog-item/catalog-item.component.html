@@ -1,0 +1,15 @@
+<p>
+  catalog-item works!
+</p>
+
+<div *ngIf="catalogItem">
+      <h2>{{catalogItem.name}} details!</h2>
+      <div>
+        <label>id: </label>{{catalogItem.id}}
+      </div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="catalogItem.name" placeholder="name"/>
+      </div>
+      <button (click)="goBack()">Back</button>
+</div>

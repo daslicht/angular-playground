@@ -1,0 +1,9 @@
+<p>
+  catalog works!
+</p>
+
+<ul>
+  <li *ngFor="let catalogItem of catalogItems">
+    <a [routerLink]="['/catalog-item', catalogItem.id]">{{catalogItem.name}}</a>
+  </li>
+</ul>
