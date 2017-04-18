@@ -1,3 +1,20 @@
-<p>
-  video-collection works!
-</p>
+<div class="demo-container">
+  
+  <h2>
+    Video Collection Component
+  </h2>
+
+  <!--length: {{ (vimeoCollectionItems | async).length }}-->
+
+  <div *ngIf="vimeoCollectionItems| async">
+    <strong>vimeoCollectionItems has {{(vimeoCollectionItems | async).length}} items</strong>
+
+    <div *ngIf="(vimeoCollectionItems| async).length != 0">
+      not null
+      <div *ngFor="let vimeoItem of vimeoCollectionItems| async" >
+        Item Name: {{vimeoItem.name}}
+      </div>
+    </div>
+  </div>
+
+</div>

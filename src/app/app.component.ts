@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Bind @Input() decorator to RX/Subject';
+  title = 'NgRX Counter Example';
 }

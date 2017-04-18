@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']
 })
+
 export class VideoComponent implements OnInit {
 
   public vimeoItems: Subject<VimeoItem[]>  =  new Subject();
+  public vimeoCollectionItems: Subject<VimeoItem[]>  =  new Subject();
 
   constructor( private videoService: VideoService) { }
 
@@ -21,12 +23,8 @@ export class VideoComponent implements OnInit {
     });
 
     this.vimeoItems.subscribe( response => {
-      console.log('VideoComponent / vimeoItems subscription', response);
+      console.log('VideoComponent / vimeoItems subscription', response );
     });
-    // subscribe( ( vimeoItems: VimeoItem[] ) => {
-    //   console.log('response', vimeoItems );
-
-    // });
   }
 
 }

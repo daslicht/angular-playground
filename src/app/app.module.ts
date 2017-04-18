@@ -7,10 +7,12 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

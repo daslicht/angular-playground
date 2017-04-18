@@ -1,8 +1,13 @@
-<p>
-  VideoList:
-</p>
 
-<div *ngFor="let vimeoItem of vimeoItems| async" >
-  test:
-  {{vimeoItem.name}}
+<div class="demo-container">
+
+  <h2>
+    Video List Component
+  </h2>
+
+  <div *ngFor="let vimeoItem of vimeoItems| async" >
+    <p> <button (click)="addToCollection( vimeoItem )">+</button> Item Name: {{vimeoItem.name}} </p>
+  </div>
+
+
 </div>
