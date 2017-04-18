@@ -1,7 +1,3 @@
-
-
-import { CatalogItem } from './interfaces/CatalogItem';
-import { CatalogService } from './catalog.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,6 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'app works!';
-
+  title = 'Bind @Input() decorator to RX/Subject';
 }
