@@ -13,7 +13,7 @@ export class VideoComponent implements OnInit {
 
   public vimeoItems: Subject<VimeoItem[]>  =  new Subject();
 
-  constructor( private videoService: VideoService) { }
+  constructor( private videoService: VideoService) {}
 
   ngOnInit() {
     this.videoService.getAllVideos().then(  (vimeoItems: VimeoItem[]) => {
@@ -23,10 +23,7 @@ export class VideoComponent implements OnInit {
     this.vimeoItems.subscribe( response => {
       console.log('VideoComponent / vimeoItems subscription', response);
     });
-    // subscribe( ( vimeoItems: VimeoItem[] ) => {
-    //   console.log('response', vimeoItems );
 
-    // });
   }
 
 }
