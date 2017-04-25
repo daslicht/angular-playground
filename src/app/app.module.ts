@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test/test.component';
 import { TestModule } from './test/test.module';
 import { VideoModule } from './video-module/video.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
