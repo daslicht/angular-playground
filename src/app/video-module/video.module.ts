@@ -11,8 +11,8 @@ import { VideoComponent } from './video.component';
   ],
   declarations: [
     VideoComponent,
-    VideoCollectionComponent,
-    VideoListComponent
+    VideoListComponent,
+    VideoCollectionComponent
   ],
   providers: [ VideoService ],
 })
