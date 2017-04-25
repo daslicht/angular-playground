@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
-  public videoItems: Subject<VimeoItem[]>  =  new Subject();
+  public videoItems: BehaviorSubject<VimeoItem[]>  =  new BehaviorSubject(null);
 
   constructor( private videoService: VideoService) {}
 

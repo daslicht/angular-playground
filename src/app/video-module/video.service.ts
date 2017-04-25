@@ -18,9 +18,9 @@ export class VideoService {
   private api_url = api_url;
   public videoItems = new BehaviorSubject(null);
 
-  constructor(private http: Http) {
-
-  }
+  constructor(
+    private http: Http) 
+  {}
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
