@@ -1,3 +1,6 @@
+import { VideoListComponent } from './video-module/video-list/video-list.component';
+import { VideoService } from './video-module/video.service';
+import { VideoComponent } from './video-module/video.component';
 import { TestComponent } from './test/test/test.component';
 import { TestModule } from './test/test.module';
 import { VideoModule } from './video-module/video.module';
@@ -13,16 +16,17 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    VideoComponent,
+    VideoListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    VideoModule,
-    TestModule
+    AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ VideoService]
 })
 export class AppModule { }

@@ -1,12 +1,12 @@
-<p>
-  video component works!
-</p>
-Video Collection:
 
+<!--
 <app-video-collection></app-video-collection>
 
+-->
+<!--<app-video-list [vimeoItems]="vimeoItems" ></app-video-list>-->
+<!--<app-video-list></app-video-list>-->
 
-<app-video-list [vimeoItems]="vimeoItems" ></app-video-list>
+<div *ngFor="let videoItem of videoItems| async" >
+sss
+</div>
 
-
-<app-test></app-test>

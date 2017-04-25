@@ -16,7 +16,7 @@ export class VideoService {
 
 
   private api_url = api_url;
-  private videoItem$ = new BehaviorSubject(null);
+  public videoItems = new BehaviorSubject(null);
 
   constructor(private http: Http) {
 
@@ -27,11 +27,17 @@ export class VideoService {
     return Promise.reject(error.message || error);
   }
 
-  getAllVideos(): Promise<VimeoItem[] >  { // BehaviorSubject<VimeoItem[]Promise<VimeoItem[]>
-    return this.http.get( this.api_url )
-               .toPromise()
-               .then( response => response.json().data as VimeoItem[] )
-               .catch( this.handleError );
+  getAllVideos() { // BehaviorSubject<VimeoItem[]Promise<VimeoItem[]>
+    
+    let videoItems = this.http.get( this.api_url )
+                      .toPromise()
+                      .then( response => response.json().data as VimeoItem[] )
+                      .catch( this.handleError );
+       
+        videoItems.then( result => {
+          this.videoItems.next( result );
+          //console.log('getAllVideos',result)
+        })         
   }
 
   attachVideoToCollection() {

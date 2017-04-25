@@ -14,11 +14,11 @@ import { VideoComponent } from './video.component';
     VideoListComponent,
     VideoCollectionComponent
   ],
-  declarations: [
-    VideoComponent,
-    VideoListComponent,
-    VideoCollectionComponent
-  ],
-  providers: [ VideoService ],
+  // declarations: [
+  //   VideoComponent,
+  //   VideoListComponent,
+  //   VideoCollectionComponent
+  // ],
+
 })
 export class VideoModule { }

@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test/test.component';
 import { VideoComponent } from './video-module/video.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
