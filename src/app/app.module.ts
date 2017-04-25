@@ -1,3 +1,4 @@
+import { TestModule } from './test/test.module';
 import { VideoModule } from './video-module/video.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    VideoModule
+    VideoModule,
+    TestModule
   ],
   bootstrap: [AppComponent]
 })
